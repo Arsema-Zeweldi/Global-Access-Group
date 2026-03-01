@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/NexaText-Trial-ExtraLight.otf") format("opentype");
+  font-weight: 200; /* Extra Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light Weight */
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/NexaText-Trial-Light.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular Weight */
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/NexaText-Trial-Regular.otf") format("opentype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Weight */
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/NexaText-Trial-Bold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-nexa: "Nexa";
+  --background-image-galaxy: url("./assets/Images/BG_galaxy.jpg");
+  --background-image-gold-grad: linear-gradient(
+    180deg,
+    #cf9d4c 0%,
+    #694f27 100%
+  );
+
+  --background-image-gold-grad-hover: linear-gradient(
+    180deg,
+    #e3b467 0%,
+    #856636 100%
+  );
+  --shadow-gold: 1px 1px 8px 4px #d9a672;
+  --shadow-card-dark: -5px -4px 10px 0px rgba(0, 0, 0, 0.25);
+  --card-border-hover: linear-gradient(
+    180deg,
+    #ffaa00 0%,
+    #cc8800 25%,
+    #ffcd6a 50%,
+    #e6ab35 74.52%,
+    #ffdf9e 100%
+  );
+}
+
+.gold-gradient-card {
+  position: relative;
+  /* 1. The Gradient Border Hack */
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#0b1c36, #0b1c36) padding-box,
+    /* Card Body */ linear-gradient(180deg, #ffaa00, #cc8800) border-box; /* Border Gradient */
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.gold-gradient-card::after {
+  content: "";
+  position: absolute;
+  /* Shadow offset to the bottom-right */
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  z-index: -1;
+  /* The Gradient Shadow: Gold to Transparent/White */
+  background: linear-gradient(
+    135deg,
+    #cc8800 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  filter: blur(25px);
+  opacity: 0;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  border-radius: 14px;
+}
+
+.gold-gradient-card:hover::after {
+  opacity: 0.8;
+  transform: scale(1.05); /* Shadow grows slightly with the card */
+}
