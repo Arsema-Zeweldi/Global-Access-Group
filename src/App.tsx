@@ -1,17 +1,15 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/HeroSection";
-import OurMission from "./components/OurMissionSection";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
-    <div className="font-nexa">
-      <div className="bg-galaxy bg-cover bg-bottom bg-no-repeat min-h-screen">
-        <Navbar />
-
-        <Hero />
-      </div>
-      <OurMission />
+    <div className="font-nexa overflow-hidden">
+      <Routes>
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

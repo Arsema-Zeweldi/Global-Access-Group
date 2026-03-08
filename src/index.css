@@ -1,47 +1,72 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
 @font-face {
   font-family: "Nexa";
-  src: url("./assets/fonts/NexaText-Trial-ExtraLight.otf") format("opentype");
-  font-weight: 200; /* Extra Light */
+  src: url("./assets/fonts/Nexa-Heavy.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* Light Weight */
 @font-face {
   font-family: "Nexa";
-  src: url("./assets/fonts/NexaText-Trial-Light.otf") format("opentype");
-  font-weight: 300; /* Light */
+  src: url("./assets/fonts/Nexa-Thin.woff2") format("woff2");
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
-/* Regular Weight */
 @font-face {
   font-family: "Nexa";
-  src: url("./assets/fonts/NexaText-Trial-Regular.otf") format("opentype");
-  font-weight: 400; /* Regular */
+  src: url("./assets/fonts/Nexa-Light.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
-/* Bold Weight */
 @font-face {
   font-family: "Nexa";
-  src: url("./assets/fonts/NexaText-Trial-Bold.otf") format("opentype");
-  font-weight: 700; /* Bold */
+  src: url("./assets/fonts/Nexa-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("./assets/fonts/Nexa-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
   --font-nexa: "Nexa";
-  --background-image-galaxy: url("./assets/Images/BG_galaxy.jpg");
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue" Arial, "Noto Sans", sans-serif;
+  --background-image-galaxy: url("./assets/Images/new_bg.jpg");
+  --background-image-galaxy-mobile: url("./assets/Images/BG_galaxy_phone.png");
   --background-image-gold-grad: linear-gradient(
     180deg,
     #cf9d4c 0%,
     #694f27 100%
+  );
+
+  --background-image-navbar: linear-gradient(
+    180deg,
+    rgba(23, 38, 54, 0.5) 22%,
+    rgba(66, 110, 156, 0.1) 100%
   );
 
   --background-image-gold-grad-hover: linear-gradient(
@@ -49,8 +74,23 @@
     #e3b467 0%,
     #856636 100%
   );
+
+  --background-image-gold-submit: linear-gradient(
+    180deg,
+    #ffcd91 0%,
+    #ab8050 100%
+  );
+
+  --background-myBlue: linear-gradient(
+    89.76deg,
+    #101521 0.21%,
+    #092042 27.98%,
+    #092042 75.86%,
+    #101521 99.8%
+  );
+
   --shadow-gold: 1px 1px 8px 4px #d9a672;
-  --shadow-card-dark: -5px -4px 10px 0px rgba(0, 0, 0, 0.25);
+  --shadow-card-dark: 2px 2px 10px 10px rgba(0, 0, 0, 0.25);
   --card-border-hover: linear-gradient(
     180deg,
     #ffaa00 0%,
@@ -61,13 +101,47 @@
   );
 }
 
+.bg-myBlue {
+  background: var(--background-myBlue);
+}
+
+.bg-about-hero-faded {
+  background-image:
+    linear-gradient(rgba(16, 21, 33, 0.7), rgba(16, 21, 33, 0.7)),
+    url("./src/assets/Logo/Global-Access-Group.png"),
+    linear-gradient(
+      89.76deg,
+      #101521 0.21%,
+      #092042 27.98%,
+      #092042 75.86%,
+      #101521 99.8%
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-about-hero {
+  background-image:
+    url("./assets/Logo/Global-Access-Group.png"),
+    linear-gradient(
+      89.76deg,
+      #101521 0.21%,
+      #092042 27.98%,
+      #092042 75.86%,
+      #101521 99.8%
+    );
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .gold-gradient-card {
   position: relative;
-  /* 1. The Gradient Border Hack */
   border: 2px solid transparent;
   background:
     linear-gradient(#0b1c36, #0b1c36) padding-box,
-    /* Card Body */ linear-gradient(180deg, #ffaa00, #cc8800) border-box; /* Border Gradient */
+    linear-gradient(180deg, #ffaa00, #cc8800) border-box;
   border-radius: 14px;
   z-index: 1;
 }
@@ -75,13 +149,11 @@
 .gold-gradient-card::after {
   content: "";
   position: absolute;
-  /* Shadow offset to the bottom-right */
   top: 15px;
   left: 15px;
   right: -15px;
   bottom: -15px;
   z-index: -1;
-  /* The Gradient Shadow: Gold to Transparent/White */
   background: linear-gradient(
     135deg,
     #cc8800 0%,
@@ -97,5 +169,5 @@
 
 .gold-gradient-card:hover::after {
   opacity: 0.8;
-  transform: scale(1.05); /* Shadow grows slightly with the card */
+  transform: scale(1.05);
 }

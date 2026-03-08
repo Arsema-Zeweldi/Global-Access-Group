@@ -1,16 +1,48 @@
+import { motion, type Variants } from "framer-motion";
 import MissionCard from "./missionCard";
+
 const OurMission = () => {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+        delayChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: {
+      filter: "blur(12px)",
+      opacity: 0,
+      scale: 0.9,
+      y: 100,
+    },
+    visible: {
+      filter: "blur(0px)",
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    },
+  };
+
   const mission = [
     {
       id: "1",
       icon: "src/assets/Graphics/Outsourcing.png",
-      name: "Recruitment",
-      detail: "Rigorous vetting for language, skill, and fit.",
+      name: "Outsourcing",
+      detail: "Skilled candidates who match your company's needs.",
     },
     {
       id: "2",
       icon: "src/assets/Graphics/Interview.png",
-      name: "Taleny Matching",
+      name: "Talent Matching",
       detail: "Industry-aligned candidates ready from Day 1.",
     },
     {
@@ -26,25 +58,50 @@ const OurMission = () => {
       detail: "Real-time tracking, reviews, and KPI improvement.",
     },
   ];
+
   return (
-    <div className="bg-white flex flex-col font-regular justify-between items-center mt-10">
-      <div className="flex items-center w-full gap-0 max-w-lg mx-auto mb-10">
-        {/* Left Line */}
-        <div className="grow h-0.5 bg-[#D9A672] shadow-gold-reversed" />
+    <motion.div
+      id="mission"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+      className="bg-[#F3EFEE]/50 flex flex-col gap-5 font-regular justify-between items-center pt-10 min-h-screen"
+    >
+      <motion.div
+        variants={itemVariants}
+        className="flex items-center w-full max-w-sm lg:max-w-lg mx-auto"
+      >
+        <motion.div
+          variants={itemVariants}
+          className="grow h-1.25 lg:h-0.5 bg-[#D9A672] shadow-gold-reversed"
+        />
+        <motion.div
+          variants={itemVariants}
+          className="border-[#D9A672] shadow-gold py-2 px-2 lg:px-8 border-2 rounded-3xl lg:rounded-xl shrink-0"
+        >
+          <motion.h1
+            variants={itemVariants}
+            className="font-bold text-xl lg:text-2xl tracking-widest uppercase"
+          >
+            OUR MISSION
+          </motion.h1>
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          className="grow h-1.25 lg:h-0.5 bg-[#D9A672] shadow-gold-reversed"
+        />
+      </motion.div>
 
-        {/* Center Content */}
-        <div className="border-[#D9A672] shadow-gold py-2 px-8 border-2 rounded-xl  shrink-0">
-          <h1 className=" font-nexa tracking-widest">OUR MISSION</h1>
-        </div>
-
-        {/* Right Line */}
-        <div className="grow h-0.5 bg-[#D9A672] shadow-gold-reversed" />
-      </div>
-      <p className="font-light text-2xl max-w-xl text-center mb-12">
+      <motion.p
+        variants={itemVariants}
+        className="font-light text-md lg:text-[35px] max-w-4xl text-center leading-tight mb-2"
+      >
         Providing Business With Access To The World Best Talent Without Extra
         Overhead
-      </p>
-      <div className="flex mt-8 gap-10 px-10 mb-15 ">
+      </motion.p>
+
+      <motion.div className="flex flex-col lg:flex-row gap-8 lg:gap-10 justify-center px-10 lg:px-10 mb-20 w-full max-w-6xl">
         {mission.map((item) => (
           <MissionCard
             key={item.id}
@@ -53,8 +110,8 @@ const OurMission = () => {
             detail={item.detail}
           />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
