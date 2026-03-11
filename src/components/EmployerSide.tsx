@@ -38,28 +38,40 @@ const EmployerSide = () => {
     year === today.getFullYear();
 
   const sideVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-      filter: "blur(15px)",
-      scale: 0.95,
-    },
+    hidden: { opacity: 0, filter: "blur(10px)" },
     visible: {
       opacity: 1,
-      x: 0,
       filter: "blur(0px)",
-      scale: 1,
       transition: {
-        duration: 0.8,
-        ease: [0.215, 0.61, 0.355, 1],
-        staggerChildren: 0.02,
+        staggerChildren: 0.4,
       },
     },
   };
 
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+      },
+    },
+  };
+
+  const headingVariants: Variants = {
+    hidden: { opacity: 0, y: 10, filter: "blur(5px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+    },
   };
 
   return (
@@ -67,11 +79,17 @@ const EmployerSide = () => {
       variants={sideVariants}
       className="flex flex-col lg:items-center items-end h-full w-full px-4"
     >
-      <h2 className="text-[20px] w-full font-black lg:font-bold uppercase text-left lg:text-center mb-2 lg:text-[28px] lg:mb-6 lg:normal-case">
+      <motion.h2
+        variants={headingVariants}
+        className="text-[20px] w-full font-black lg:font-bold uppercase text-left lg:text-center mb-2 lg:text-[28px] lg:mb-6 lg:normal-case"
+      >
         Employer
-      </h2>
+      </motion.h2>
 
-      <div className="bg-[#FCFBFB] p-4 lg:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col  justify-between lg:w-full w-70 h-auto max-w-md lg:min-h-120">
+      <motion.div
+        variants={cardVariants}
+        className="bg-[#FCFBFB] p-4 lg:p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col  justify-between lg:w-full w-70 h-auto max-w-md lg:min-h-120"
+      >
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-black font-bold text-xl tracking-tight capitalize">
@@ -124,15 +142,12 @@ const EmployerSide = () => {
           </div>
         </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col items-center lg:pt-2"
-        >
+        <div className="flex flex-col items-center lg:pt-2">
           <button className="py-3 px-8 bg-[#092042] text-white text-[18px] lg:text-[22px] font-bold rounded-full shadow-md hover:bg-[#071935] transition-all active:scale-95 cursor-pointer">
             Book A Chat
           </button>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };

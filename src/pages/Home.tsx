@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/HeroSection";
 import OurMission from "../components/OurMissionSection";
@@ -33,10 +33,10 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="bg-galaxy-mobile lg:bg-galaxy bg-cover bg-center bg-no-repeat min-h-screen">
+            <div className="bg-galaxy-mobile bg-size-[100%_100%] lg:bg-galaxy bg-bottom bg-no-repeat min-h-screen">
               <Navbar />
+              <Hero />
             </div>
-            <Hero />
 
             <div id="mission">
               <OurMission />

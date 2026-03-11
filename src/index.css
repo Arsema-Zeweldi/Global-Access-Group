@@ -55,7 +55,7 @@ p {
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue" Arial, "Noto Sans", sans-serif;
-  --background-image-galaxy: url("./assets/Images/new_bg.jpg");
+  --background-image-galaxy: url("./assets/Images/bg_galaxy_web.png");
   --background-image-galaxy-mobile: url("./assets/Images/BG_galaxy_phone.png");
   --background-image-gold-grad: linear-gradient(
     180deg,
@@ -63,6 +63,12 @@ p {
     #694f27 100%
   );
 
+  --background-image-service-border: linear-gradient(
+    180deg,
+    #85612f 23%,
+    #ffe4ae 53%,
+    #85612f 100%
+  );
   --background-image-navbar: linear-gradient(
     180deg,
     rgba(23, 38, 54, 0.5) 22%,
@@ -103,6 +109,10 @@ p {
 
 .bg-myBlue {
   background: var(--background-myBlue);
+}
+
+.bg-service-border {
+  border-image-source: var(--background-image-service-border);
 }
 
 .bg-about-hero-faded {

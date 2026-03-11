@@ -1,4 +1,10 @@
-import { FaTiktok, FaInstagram, FaTelegram } from "react-icons/fa6";
+import {
+  FaTiktok,
+  FaInstagram,
+  FaTelegram,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -35,6 +41,22 @@ const Footer = () => {
           className="text-white hover:text-[#D6AF4E] transition-colors duration-300"
         >
           <FaTelegram size={24} className="lg:size-7" />
+        </a>
+        <a
+          href="https://web.facebook.com/profile.php?id=61583558430555"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-[#D6AF4E] transition-colors duration-300"
+        >
+          <FaFacebook size={24} className="lg:size-7" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/global-access-group-partners/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-[#D6AF4E] transition-colors duration-300"
+        >
+          <FaLinkedin size={24} className="lg:size-7" />
         </a>
       </div>
 

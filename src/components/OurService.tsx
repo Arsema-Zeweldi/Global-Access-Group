@@ -6,9 +6,6 @@ const OurService = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
     },
   };
 
@@ -47,7 +44,7 @@ const OurService = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="flex items-center w-full gap-0 max-w-3xl mx-auto mb-5"
+          className="flex items-center w-full gap-0 max-w-3xl mx-auto lg:mb-5 mb-0"
         >
           <div className="grow h-0.5 bg-[#D9A672] shadow-gold-reversed" />
 
@@ -66,7 +63,7 @@ const OurService = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="flex flex-col lg:flex-row gap-6 lg:gap-2 justify-center items-start lg:min-h-screen lg:px-10 pb-20"
+        className="flex flex-col lg:flex-row lg:gap-2 justify-center items-start lg:min-h-screen lg:px-10 pb-20"
       >
         {services.map((service, index) => (
           <ServiceCard
@@ -74,6 +71,7 @@ const OurService = () => {
             image={service.image}
             title={service.title}
             description={service.description}
+            index={index}
           />
         ))}
       </motion.div>

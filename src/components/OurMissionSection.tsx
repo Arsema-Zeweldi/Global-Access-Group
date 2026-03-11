@@ -7,8 +7,7 @@ const OurMission = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
-        delayChildren: 0.5,
+        delayChildren: 0.2,
       },
     },
   };
@@ -26,7 +25,7 @@ const OurMission = () => {
       scale: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 1,
         ease: [0.215, 0.61, 0.355, 1],
       },
     },
@@ -43,7 +42,7 @@ const OurMission = () => {
       id: "2",
       icon: "src/assets/Graphics/Interview.png",
       name: "Talent Matching",
-      detail: "Industry-aligned candidates ready from Day 1.",
+      detail: "Industry aligned candidates ready from Day 1.",
     },
     {
       id: "3",
@@ -66,11 +65,11 @@ const OurMission = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className="bg-[#F3EFEE]/50 flex flex-col gap-5 font-regular justify-between items-center pt-10 min-h-screen"
+      className="bg-[#F3EFEE]/50 flex flex-col gap-3 font-regular justify-between items-center pt-[4vh] min-h-screen"
     >
       <motion.div
         variants={itemVariants}
-        className="flex items-center w-full max-w-sm lg:max-w-lg mx-auto"
+        className="flex items-center w-full max-w-xs lg:max-w-3xl mx-auto"
       >
         <motion.div
           variants={itemVariants}
@@ -82,7 +81,7 @@ const OurMission = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="font-bold text-xl lg:text-2xl tracking-widest uppercase"
+            className="font-bold text-xl lg:text-3xl tracking-widest uppercase"
           >
             OUR MISSION
           </motion.h1>
@@ -95,13 +94,13 @@ const OurMission = () => {
 
       <motion.p
         variants={itemVariants}
-        className="font-light text-md lg:text-[35px] max-w-4xl text-center leading-tight mb-2"
+        className="px-2 font-bold text-xl lg:text-[32px] max-w-4xl text-center leading-tight mt-2 mb-5 lg:mb-[6vh]"
       >
         Providing Business With Access To The World Best Talent Without Extra
         Overhead
       </motion.p>
 
-      <motion.div className="flex flex-col lg:flex-row gap-8 lg:gap-10 justify-center px-10 lg:px-10 mb-20 w-full max-w-6xl">
+      <motion.div className="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-center px-10 lg:px-10 mb-10 w-full max-w-6xl">
         {mission.map((item) => (
           <MissionCard
             key={item.id}

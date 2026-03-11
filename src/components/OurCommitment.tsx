@@ -8,7 +8,7 @@ const cardItems = [
   },
   {
     image: "/src/assets/Graphics/globe.png",
-    title: "The Globe Bridge",
+    title: "The Global Bridge",
     text: "Access a world-class workforce that is fully trained and driven by global excellence.",
   },
   {
@@ -26,7 +26,7 @@ const OurCommitment = () => {
       </div>
 
       <div
-        className="flex flex-col gap-13 lg:gap-10 w-full max-w-7xl mx-auto lg:p-10 bg-no-repeat bg-position-[98%_center] lg:bg-position-[65%_center] bg-size-[auto_100%] lg:px-10"
+        className="flex flex-col gap-8 lg:gap-10 w-full max-w-7xl mx-auto lg:p-10 bg-no-repeat bg-position-[98%_center] lg:bg-position-[75%_center] bg-size-[auto_100%] lg:px-10"
         style={{
           backgroundImage: `url("/temp/line2.png")`,
         }}
