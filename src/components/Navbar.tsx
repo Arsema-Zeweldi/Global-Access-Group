@@ -27,7 +27,7 @@ const Navbar = () => {
           <img
             src="./Logo/Global-Access-Group.png"
             alt="Logo"
-            className="h-15 w-18"
+            className="h-15 lg:h-20 w-auto"
           />
           <p className="text-white text-lg font-bold hidden lg:block ">
             GLOBAL ACCESS GROUP

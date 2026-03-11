@@ -87,14 +87,22 @@ p {
     #ab8050 100%
   );
 
-  --background-myBlue: linear-gradient(
+  /* --background-myBlue: linear-gradient(
     89.76deg,
     #101521 0.21%,
     #092042 27.98%,
     #092042 75.86%,
     #101521 99.8%
-  );
-
+  ); */
+  --background-myBlue:
+    linear-gradient(rgba(16, 21, 33, 0.7), rgba(16, 21, 33, 0.7)),
+    linear-gradient(
+      89.76deg,
+      #101521 0.21%,
+      #092042 27.98%,
+      #092042 75.86%,
+      #101521 99.8%
+    );
   --background-about-blue: linear-gradient(
     180deg,
     rgba(23, 38, 54, 0.5) 22%,

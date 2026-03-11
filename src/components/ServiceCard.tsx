@@ -50,7 +50,7 @@ const ServiceCard = ({ image, title, description, index }: card) => {
             {title}
           </p>
 
-          <div className="max-h-40 opacity-100 transition-all duration-700 overflow-hidden lg:max-h-0 lg:opacity-0 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
+          <div className="max-h-40 opacity-100 transition-all overflow-hidden lg:max-h-0 lg:opacity-0 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
             <img
               src="./Graphics/yellow-glow-light.png"
               alt=""
