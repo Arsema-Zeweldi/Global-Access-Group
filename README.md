@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# Global Access Group Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the official landing page of Global Access Group, a premier outsourcing firm dedicated to bridging the gap between global talent and industry-leading enterprises.
 
-Currently, two official plugins are available:
+The site is built using React and Tailwind CSS, focusing on high performance, responsive design, and a modern aesthetic that reflects the company's mission of seamless global integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+Framework: React (Functional Components, Hooks)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Styling: Tailwind CSS (Utility-first CSS, Responsive Design)
 
-## Expanding the ESLint configuration
+Icons: Lucide React / FontAwesome
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Animations: Framer Motion (Optional but recommended for smooth transitions)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Build Tool: Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Key Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Dynamic Hero Section: Engaging visuals and clear Value Propositions.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Service Catalog: Detailed sections for BPO, IT Outsourcing, and Specialized Staffing.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Founder/Team Showcases: Responsive cards highlighting leadership profiles.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Custom UI Components: \* Interactive loading screens.
+
+Optimized background positioning for high-resolution displays.
+
+Fully responsive navigation and mobile-first layout.
+
+Lead Generation: Integrated contact forms and CTA (Call to Action) buttons.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js installed on your machine.
+
+### Installation
+
+Clone the repository:
+
+Bash
+git clone https://github.com/your-username/global-access-group.git
+cd global-access-group
+Install dependencies:
+
+Bash
+npm install
+
+# or
+
+yarn install
+Start the development server:
+
+Bash
+npm run dev
+Build for production:
+
+Bash
+npm run build
+
+## Project Structure
+
+Plaintext
+src/
+├── components/ # Reusable UI elements (Buttons, Cards, Navbar)
+├── sections/ # Major page sections (Hero, About, Services, Footer)
+├── assets/ # Images, logos, and global styles
+├── hooks/ # Custom React hooks
+└── App.jsx # Main entry point and routing
+
+## Design Philosophy
+
+Global Access Group emphasizes professionalism and accessibility. The UI utilizes a clean, "Corporate Modern" palette with significant whitespace and bold typography.
+
+Color Palette: Deep Blues (Trust), Clean Whites (Clarity), and Slate Grays (Sophistication).
+
+Performance: All images are optimized, and Tailwind's JIT (Just-In-Time) engine is used to keep the CSS bundle minimal.
