@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="text-white mt-[25vh] lg:mt-30"
+      className="text-white mt-[25vh] lg:mt-[16vh]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

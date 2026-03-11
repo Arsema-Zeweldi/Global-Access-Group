@@ -11,27 +11,27 @@ const OurService = () => {
 
   const services = [
     {
-      image: "src/assets/Images/services/server1.png",
+      image: "./Images/services/server1.png",
       title: "Sales Development Representative",
       description: "Qualifies inbound leads",
     },
     {
-      image: "src/assets/Images/services/BDR.png",
+      image: "./Images/services/BDR.png",
       title: "Business Development Representative",
       description: "Hunts new revenue",
     },
     {
-      image: "src/assets/Images/services/Dispatcher.png",
+      image: "./Images/services/Dispatcher.png",
       title: "Dispatcher",
       description: "Synchronizes filed operations",
     },
     {
-      image: "src/assets/Images/services/virtual-assistant.png",
+      image: "./Images/services/virtual-assistant.png",
       title: "Virtual Assistant",
       description: "Reclaims your billable hours",
     },
     {
-      image: "src/assets/Images/services/Customer-Services.png",
+      image: "./Images/services/Customer-Services.png",
       title: "Customer Services",
       description: "Turns inquiries into customers",
     },

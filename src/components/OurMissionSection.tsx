@@ -34,25 +34,25 @@ const OurMission = () => {
   const mission = [
     {
       id: "1",
-      icon: "src/assets/Graphics/Outsourcing.png",
+      icon: "./Graphics/Outsourcing.png",
       name: "Outsourcing",
       detail: "Skilled candidates who match your company's needs.",
     },
     {
       id: "2",
-      icon: "src/assets/Graphics/Interview.png",
+      icon: "./Graphics/Interview.png",
       name: "Talent Matching",
       detail: "Industry aligned candidates ready from Day 1.",
     },
     {
       id: "3",
-      icon: "src/assets/Graphics/Placment.png",
+      icon: "./Graphics/Placment.png",
       name: "Placement",
       detail: "Training support or seamlesss system integration.",
     },
     {
       id: "4",
-      icon: "src/assets/Graphics/Optimization.png",
+      icon: "./Graphics/Optimization.png",
       name: "Performance Optimization",
       detail: "Real-time tracking, reviews, and KPI improvement.",
     },

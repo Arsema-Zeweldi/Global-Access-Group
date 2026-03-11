@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="flex flex-col justify-center gap-4 lg:p-10">
       <div className="flex justify-center">
         <img
-          src="src/assets/Logo/Global-Access-Group.png"
+          src="./Logo/Global-Access-Group.png"
           alt="Logo"
           className="h-auto w-20 lg:w-40"
         />

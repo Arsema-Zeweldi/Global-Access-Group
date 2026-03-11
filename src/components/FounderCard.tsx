@@ -23,15 +23,14 @@ const FounderCard = ({ image, name, text, align, index }: card) => {
       }}
     >
       <div
-        className={`flex flex-col sm:flex-row items-center gap-4 lg:gap-6 bg-[#0A2143] text-white p-6 lg:p-8 w-[90%] sm:w-auto lg:w-[780px] border-y-4 border-[#FFAE36] ${
+        className={`flex flex-col sm:flex-row items-center gap-4 lg:gap-6 bg-[linear-gradient(180deg,#1A1F32_63.46%,#030303_100%)] text-white p-6 lg:p-8 w-[90%] sm:w-auto lg:w-195 border-y-4 border-[#D9A672] ${
           isRight
             ? "border-l-4 rounded-l-3xl self-end"
             : "border-r-4 rounded-r-3xl self-start"
-        }
-    `}
+        }`}
       >
-        <div className="p-px rounded-full bg-[#FFAE36] shrink-0">
-          <div className="bg-[#FFAE36] rounded-full p-1 flex items-center justify-center">
+        <div className="p-px rounded-full bg-service-border shrink-0">
+          <div className="bg-service-border rounded-full p-1 flex items-center justify-center">
             <img
               src={image}
               alt={name}

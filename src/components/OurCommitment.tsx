@@ -2,17 +2,17 @@ import CommitmentCard from "./CommitmentCard";
 
 const cardItems = [
   {
-    image: "/src/assets/Graphics/shield.png",
+    image: "/Graphics/shield.png",
     title: "Your Peace of Mind is Our Priority",
     text: "Stop being the bottleneck in your own growth we handle the heavy lifting so you can focus on the big picture.",
   },
   {
-    image: "/src/assets/Graphics/globe.png",
+    image: "/Graphics/globe.png",
     title: "The Global Bridge",
     text: "Access a world-class workforce that is fully trained and driven by global excellence.",
   },
   {
-    image: "/src/assets/Graphics/handshake.png",
+    image: "/Graphics/handshake.png",
     title: "We Don't Have Clients; We Have Partners.",
     text: "We aren't just a vendor; we are a dedicated partner whose success is 100% tied to your revenue and results",
   },
@@ -26,9 +26,9 @@ const OurCommitment = () => {
       </div>
 
       <div
-        className="flex flex-col gap-8 lg:gap-10 w-full max-w-7xl mx-auto lg:p-10 bg-no-repeat bg-position-[98%_center] lg:bg-position-[75%_center] bg-size-[auto_100%] lg:px-10"
+        className="flex flex-col gap-8 lg:gap-10 w-full max-w-7xl mx-auto lg:p-10 bg-no-repeat bg-position-[98%_center] lg:bg-position-[75%_center] bg-size-[auto_100%] "
         style={{
-          backgroundImage: `url("src/assets/Graphics/line2.png")`,
+          backgroundImage: `url("./Graphics/line2.png")`,
         }}
       >
         {cardItems.map((item, index) => (

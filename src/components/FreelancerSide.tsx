@@ -1,29 +1,8 @@
-import { useForm } from "react-hook-form";
 import { motion, type Variants } from "framer-motion";
 
-type FormInputs = {
-  firstName: string;
-  lastName: string;
-  email: string;
-};
-
 const FreelancerSide = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<FormInputs>();
-
-  const onSubmit = (data: FormInputs) => {
-    console.log(data);
-    reset();
+  const onSubmit = () => {
     window.open("https://forms.gle/aq97oYs1UFDataaM7", "_blank");
-  };
-
-  const namePattern = {
-    value: /^[A-Za-z\s]+$/i,
-    message: "Only letters are allowed",
   };
 
   const sideVariants: Variants = {
@@ -87,7 +66,7 @@ const FreelancerSide = () => {
             GLOBAL ACCESS GROUP
           </p>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="lg:space-y-4 grow">
+          <form onClick={onSubmit} className="lg:space-y-4 grow">
             <div className="flex flex-col group">
               <label
                 htmlFor="firstName"
@@ -96,42 +75,24 @@ const FreelancerSide = () => {
                 First Name<span className="text-red-500">*</span>
               </label>
               <input
-                {...register("firstName", {
-                  required: "First name is required",
-                  pattern: namePattern,
-                })}
                 type="text"
                 id="firstName"
-                className={`border ${errors.firstName ? "border-red-500" : "border-black/10"} bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all`}
+                className="border border-[#D9D9D9]/80 bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all"
               />
-              {errors.firstName && (
-                <span className="text-red-500 text-xs mt-1 ml-3">
-                  {errors.firstName.message}
-                </span>
-              )}
             </div>
 
             <div className="flex flex-col group">
               <label
                 htmlFor="lastName"
-                className="font-bold text-[16px] text-black/50 mb-1 group-focus-within:text-black transition-colors"
+                className="font-bold text-[16px]  text-black/50 mb-1 group-focus-within:text-black transition-colors"
               >
                 Last Name<span className="text-red-500">*</span>
               </label>
               <input
-                {...register("lastName", {
-                  required: "Last name is required",
-                  pattern: namePattern,
-                })}
                 type="text"
                 id="lastName"
-                className={`border ${errors.lastName ? "border-red-500" : "border-black/10"} bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all`}
+                className={`border border-[#D9D9D9]/80 bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all`}
               />
-              {errors.lastName && (
-                <span className="text-red-500 text-xs mt-1 ml-3">
-                  {errors.lastName.message}
-                </span>
-              )}
             </div>
 
             <div className="flex flex-col group">
@@ -142,16 +103,9 @@ const FreelancerSide = () => {
                 Email Address<span className="text-red-500">*</span>
               </label>
               <input
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address",
-                  },
-                })}
                 type="email"
                 id="email"
-                className={`border ${errors.email ? "border-red-500" : "border-black/10"} bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all`}
+                className="border border-[#D9D9D9]/80 bg-[#D9D9D9]/20 rounded-full w-full p-1 lg:p-3 text-base outline-none focus:border-[#CF9A51] focus:bg-white transition-all"
               />
             </div>
 

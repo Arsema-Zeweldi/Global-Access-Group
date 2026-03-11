@@ -42,7 +42,7 @@ const CommitmentCard = ({ image, title, text, align }: card) => {
 
   return (
     <motion.div
-      className={`${alignmentClass} w-[80%] lg:w-full lg:max-w-175`}
+      className={`${alignmentClass} w-[90%] lg:w-full lg:max-w-175`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}

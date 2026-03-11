@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-2 px-4 lg:pl-4 lg:pr-15">
         <div className="flex gap-2 items-center">
           <img
-            src="src/assets/Logo/Global-Access-Group.png"
+            src="./Logo/Global-Access-Group.png"
             alt="Logo"
             className="h-15 w-18"
           />
@@ -37,7 +37,7 @@ const Navbar = () => {
         <nav className="hidden lg:flex items-center gap-6 text-white font-bold tracking-widest py-6">
           <Link
             to="/"
-            className="hover:text-[#D9A672] transition-colors uppercase"
+            className="hover:text-[#FFE4AE] transition-colors uppercase"
           >
             Home
           </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
           <a
             href="#mission"
             onClick={(e) => handleScroll(e, "mission")}
-            className="hover:text-[#D9A672] transition-colors uppercase"
+            className="hover:text-[#FFE4AE] transition-colors uppercase"
           >
             Our Mission
           </a>
@@ -53,14 +53,14 @@ const Navbar = () => {
           <a
             href="#services"
             onClick={(e) => handleScroll(e, "services")}
-            className="hover:text-[#D9A672] transition-colors uppercase"
+            className="hover:text-[#FFE4AE] transition-colors uppercase"
           >
             Our Service
           </a>
           <div className="h-5 w-px bg-white/80" />
           <Link
             to="/about"
-            className="hover:text-[#D9A672] transition-colors uppercase"
+            className="hover:text-[#FFE4AE] transition-colors uppercase"
           >
             About Us
           </Link>
@@ -81,27 +81,27 @@ const Navbar = () => {
       `}
       >
         <nav className="flex flex-col items-center gap-8 text-white font-light text-xl tracking-[0.2em] uppercase">
-          <Link to="/" onClick={closeMenu} className="hover:text-[#D9A672]">
+          <Link to="/" onClick={closeMenu} className="hover:text-[#FFE4AE]">
             Home
           </Link>
           <a
             href="#mission"
             onClick={(e) => handleScroll(e, "mission")}
-            className="hover:text-[#D9A672]"
+            className="hover:text-[#FFE4AE]"
           >
             Our Mission
           </a>
           <a
             href="#services"
             onClick={(e) => handleScroll(e, "services")}
-            className="hover:text-[#D9A672]"
+            className="hover:text-[#FFE4AE]"
           >
             Our Service
           </a>
           <Link
             to="/about"
             onClick={closeMenu}
-            className="hover:text-[#D9A672]"
+            className="hover:text-[#FFE4AE]"
           >
             About Us
           </Link>
