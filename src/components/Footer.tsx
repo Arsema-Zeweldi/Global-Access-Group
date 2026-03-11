@@ -60,14 +60,14 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="w-full flex justify-center gap-1 lg:gap-4 text-white font-light text-[12px] lg:text-xl">
+      <div className="w-full flex justify-center gap-1 lg:gap-4 text-white font-bold text-[10px] lg:text-lg">
         <p>COPYRIGHT @ 2026</p>
         <div className="h-5 w-px bg-white/80" />
         <p>ALL RIGHTS RESERVED</p>
         <div className="h-5 w-px bg-white/80" />
         <p>PRIVACY POLICY</p>
       </div>
-      <div className="text-center text-white font-light mb-6">
+      <div className="text-center text-[10px] lg:text-lg text-white font-light mb-2">
         GLOBAL OUTSOURCING COMPANY
       </div>
     </div>

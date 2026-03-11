@@ -10,21 +10,24 @@ interface card {
 
 const FounderCard = ({ image, name, text, align, index }: card) => {
   const isRight = align === "right";
-  const alignmentClass = align === "right" ? "self-end" : "self-start";
   return (
     <motion.div
-      className={`${alignmentClass} max-w-full`}
+      className={`w-full flex ${isRight ? "justify-end" : "justify-start"}`}
       initial={{ opacity: 0, x: isRight ? 100 : -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{
         duration: 0.8,
-        delay: index * 0.4,
+        delay: index * 0.1,
         ease: "easeOut",
       }}
     >
       <div
-        className={`flex items-center bg-[#0A2143] w-165 h-40 px-5 font-nexa border-0 border-[#FFAE36] border-t-4 border-b-4 ${isRight ? "border-l-4 rounded-l-4xl" : "border-r-4 rounded-r-4xl"}
+        className={`flex flex-col sm:flex-row items-center gap-4 lg:gap-6 bg-[#0A2143] text-white p-6 lg:p-8 w-[90%] sm:w-auto lg:w-[780px] border-y-4 border-[#FFAE36] ${
+          isRight
+            ? "border-l-4 rounded-l-3xl self-end"
+            : "border-r-4 rounded-r-3xl self-start"
+        }
     `}
       >
         <div className="p-px rounded-full bg-[#FFAE36] shrink-0">
@@ -36,8 +39,8 @@ const FounderCard = ({ image, name, text, align, index }: card) => {
             />
           </div>
         </div>
-        <div className="text-center text-white flex-1 text-2xl antialiased">
-          <p className="font-extrabold py-2">{name}</p>
+        <div className=" text-white flex-1 text-xl antialiased">
+          <p className="font-extrabold py-2 text-center">{name}</p>
           <p className="font-bold leading-normal">{text}</p>
         </div>
       </div>

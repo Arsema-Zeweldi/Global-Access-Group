@@ -1,40 +1,44 @@
-import Navbar from "@/components/Navbar";
 import FounderCard from "@/components/FounderCard";
 import Footer from "@/components/Footer";
 
 const founders = [
   {
-    name: "Bruh",
-    image: "/temp/server1.png",
-    text: "TBD",
+    name: "BRUH Co-Founder and Partnership Director",
+    image: "src/assets/Images/founders/bruh.png",
+    text: "Co-founder and growth operator specializing in high-volume outreach, pipeline development, and client acquisition, with a proven track record of turning cold prospects into consistent revenue opportunities across multiple industries.",
   },
   {
-    name: "Bruh",
-    image: "/temp/server1.png",
-    text: "TBD",
+    name: "YOHANA Co-FOunder and Partnership Director",
+    image: "src/assets/Images/founders/yohanna.png",
+    text: "Yohana has driven measurable sales results, managing the full sales cycle in logistics, excelling as a Quality Assurance Analyst to ensure flawless pipelines, and as an Appointment Setter generating consistent leads and closing over $70K in high-value deals across key sectors.",
   },
   {
-    name: "Bruh",
-    image: "/temp/server1.png",
-    text: "TBD",
+    name: "LIYDYA Co-Founder and Head of Talent Strategy",
+    image: "src/assets/Images/founders/lidya.png",
+    text: "Yohana has driven measurable sales results, managing the full sales cycle in logistics, excelling as a Quality Assurance Analyst to ensure flawless pipelines, and as an Appointment Setter generating consistent leads and closing over $70K in high-value deals across key sectors.",
   },
   {
-    name: "Bruh",
-    image: "/temp/server1.png",
-    text: "TBD",
+    name: "PHILI  Co-Founder and Head of Talent Acquisition",
+    image: "src/assets/Images/founders/phili.png",
+    text: "Phil has produced strong sales outcomes, overseeing the entire sales process in high-volume outbound environments, standing out in lead generation and pipeline development, and as an Appointment Setter consistently creating qualified opportunities and closing between $500K–$1M in high-value deals across multiple sectors.",
   },
 ];
 
 const AboutUs = () => {
   return (
     <div className="bg-myBlue">
-      <Navbar />
-      <div>
+      <div className="flex justify-between items-center bg-about-blue py-6 rounded-b-4xl shadow-lg shadow-[#8E8E8E]/25">
+        <img
+          src="src/assets/Logo/Global-Access-Group.png"
+          alt="Logo"
+          className="h-15 w-18"
+        />
         <h1 className="text-center text-white text-4xl font-extrabold">
           ABOUT US
         </h1>
+        <div></div>
       </div>
-      <div className="mt-10 py-20 mb-10 bg-about-hero min-h-screen">
+      <div className="mt-10 pt-15 mb-10 bg-about-hero min-h-screen">
         <div className="flex flex-col gap-6 w-full">
           {founders.map((founder, index) => (
             <FounderCard
