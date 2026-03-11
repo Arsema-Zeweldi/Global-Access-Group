@@ -74,6 +74,10 @@ const EmployerSide = () => {
     },
   };
 
+  const onBook = () => {
+    window.open("https://calendar.app.google/fX4KJGUAozwXSmyP8", "_blank");
+  };
+
   return (
     <motion.div
       variants={sideVariants}
@@ -143,7 +147,10 @@ const EmployerSide = () => {
         </div>
 
         <div className="flex flex-col items-center lg:pt-2">
-          <button className="py-3 px-8 bg-[#092042] text-white text-[18px] lg:text-[22px] font-bold rounded-full shadow-md hover:bg-[#071935] transition-all active:scale-95 cursor-pointer">
+          <button
+            onClick={onBook}
+            className="py-3 px-8 bg-[#092042] text-white text-[18px] lg:text-[22px] font-bold rounded-full shadow-md hover:bg-[#071935] transition-all active:scale-95 cursor-pointer"
+          >
             Book A Chat
           </button>
         </div>

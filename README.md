@@ -42,35 +42,42 @@ Ensure you have Node.js installed on your machine.
 
 Clone the repository:
 
-Bash
+```
 git clone https://github.com/your-username/global-access-group.git
 cd global-access-group
+```
+
 Install dependencies:
 
-Bash
+```
 npm install
+
 
 # or
 
 yarn install
+```
+
 Start the development server:
 
-Bash
+```
 npm run dev
+```
+
 Build for production:
 
-Bash
+```
 npm run build
+```
 
 ## Project Structure
 
 Plaintext
 src/
-├── components/ # Reusable UI elements (Buttons, Cards, Navbar)
-├── sections/ # Major page sections (Hero, About, Services, Footer)
+├── components/ # Reusable UI elements (Cards, Navbar)
+├── sections/ # Major page sections (Hero, Mission, Services, Footer)
 ├── assets/ # Images, logos, and global styles
-├── hooks/ # Custom React hooks
-└── App.jsx # Main entry point and routing
+└── App.tsx # Main entry point and routing
 
 ## Design Philosophy
 

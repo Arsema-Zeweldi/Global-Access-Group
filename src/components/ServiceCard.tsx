@@ -35,7 +35,7 @@ const ServiceCard = ({ image, title, description, index }: card) => {
       className="group relative flex cursor-pointer flex-col items-center px-0 lg:px-5 text-center perspective-[1000px] w-full lg:pt-15"
     >
       <div
-        className={`w-full h-44 flex items-center p-2 ${isEven ? "flex-row" : "flex-row-reverse"} transition-all duration-500 ease-in-out lg:flex-col lg:w-43 lg:h-95 lg:rounded-[300px] lg:bg-none lg:p-0 lg:group-hover:w-55 lg:group-hover:h-120 lg:group-hover:flex-col lg:group-hover:bg-[linear-gradient(180deg,#1A1F32_63.46%,#030303_100%)] lg:group-hover:-translate-y-15 border-4 border-transparent lg:group-hover:border-[#D9A672]`}
+        className={`w-full h-44 flex items-center p-2 ${isEven ? "flex-row border-[#D9A672] border-l-0" : "flex-row-reverse border-[#D9A672] border-r-0"} transition-all duration-500 ease-in-out lg:flex-col lg:w-43 lg:h-95 lg:rounded-[300px] lg:bg-none lg:p-0 lg:group-hover:w-55 lg:group-hover:h-120 lg:group-hover:flex-col lg:group-hover:bg-[linear-gradient(180deg,#1A1F32_63.46%,#030303_100%)] lg:group-hover:-translate-y-15 border-4 lg:border-transparent lg:group-hover:border-[#D9A672]`}
       >
         <div className="relative z-20 shrink-0 transition-all ease-in-out w-28 h-auto p-0.75 rounded-full border-0 bg-service-border lg:w-full lg:h-auto lg:aspect-square lg:group-hover:bg-none">
           <img

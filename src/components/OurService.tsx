@@ -63,7 +63,7 @@ const OurService = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="flex flex-col lg:flex-row lg:gap-2 justify-center items-start lg:min-h-screen lg:px-10 pb-20"
+        className="flex flex-col lg:flex-row lg:gap-2 gap-5 justify-center items-start lg:min-h-screen lg:px-10 pb-20"
       >
         {services.map((service, index) => (
           <ServiceCard
