@@ -28,11 +28,14 @@ const AboutUs = () => {
   return (
     <div className="bg-myBlue">
       <div className="flex justify-between items-center bg-about-blue py-6 rounded-b-4xl shadow-lg shadow-[#8E8E8E]/25">
-        <img
-          src="src/assets/Logo/Global-Access-Group.png"
-          alt="Logo"
-          className="h-15 w-18"
-        />
+        <a href="/">
+          <img
+            src="src/assets/Logo/Global-Access-Group.png"
+            alt="Logo"
+            className="h-15 w-18"
+          />
+        </a>
+
         <h1 className="text-center text-white text-4xl font-extrabold">
           ABOUT US
         </h1>

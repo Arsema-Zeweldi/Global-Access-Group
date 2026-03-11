@@ -113,6 +113,12 @@ p {
   );
 }
 
+.service-border-gradient {
+  border: 4px solid transparent;
+  border-image-slice: 1;
+  border-image-source: var(--background-image-service-border);
+}
+
 .bg-myBlue {
   background: var(--background-myBlue);
 }
