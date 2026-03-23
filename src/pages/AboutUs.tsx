@@ -8,9 +8,9 @@ const founders = [
     text: "Co-founder and growth operator specializing in high-volume outreach, pipeline development, and client acquisition, with a proven track record of turning cold prospects into consistent revenue opportunities across multiple industries.",
   },
   {
-    name: "YOHANA Co-FOunder and Partnership Director",
-    image: "./Images/founders/yohanna.png",
-    text: "Yohana has driven measurable sales results, managing the full sales cycle in logistics, excelling as a Quality Assurance Analyst to ensure flawless pipelines, and as an Appointment Setter generating consistent leads and closing over $70K in high-value deals across key sectors.",
+    name: "SURA Co-FOunder and Partnership Director",
+    image: "./Images/founders/sura.png",
+    text: "Results-driven professional with proven strength in sales, lead generation, and client relationship management, consistently turning opportunities into growth.With a background in Marketing Management, I bring a strategic, adaptable approach to execution.",
   },
   {
     name: "LIYDYA Co-Founder and Head of Talent Strategy",

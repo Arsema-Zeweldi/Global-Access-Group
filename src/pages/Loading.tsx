@@ -10,7 +10,7 @@ const Loading = () => (
     className="fixed inset-0 z-999 bg-about-hero-faded flex flex-col items-center justify-center text-white font-bold px-4"
   >
     <h1 className="text-4xl lg:text-5xl mb-8 text-center tracking-widest uppercase">
-      Welcome to Global Access Solutions
+      Welcome to Global Access Group
     </h1>
     <div className="w-full max-w-sm bg-gray-800 h-1.5 rounded-full overflow-hidden">
       <motion.div

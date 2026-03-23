@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="text-white mt-[25vh] lg:mt-[16vh]"
+      className="text-white mt-[25vh] lg:mt-[7vh]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -49,13 +49,13 @@ const Hero = () => {
     >
       <motion.h1
         variants={itemVariants}
-        className="font-bold text-[28px] lg:text-[60px] text-center"
+        className="font-bold mb-0 text-[28px] lg:text-[60px] text-center"
       >
         WHERE CAPABILITY MEETS <br /> CONSISTENCY
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="font-light text-center text-[18px] lg:text-[30px]"
+        className="font-light mb-18 lg:mb-25 text-center text-[18px] lg:text-[30px]"
       >
         OnBoarding New Talents Within Days
       </motion.p>
