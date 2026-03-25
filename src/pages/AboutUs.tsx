@@ -8,7 +8,7 @@ const founders = [
     text: "Co-founder and growth operator specializing in high-volume outreach, pipeline development, and client acquisition, with a proven track record of turning cold prospects into consistent revenue opportunities across multiple industries.",
   },
   {
-    name: "SURA Co-FOunder and Partnership Director",
+    name: "SURA Co-Founder and Partnership Director",
     image: "./Images/founders/sura.png",
     text: "Results-driven professional with proven strength in sales, lead generation, and client relationship management, consistently turning opportunities into growth.With a background in Marketing Management, I bring a strategic, adaptable approach to execution.",
   },
