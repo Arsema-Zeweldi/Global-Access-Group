@@ -55,7 +55,7 @@ p {
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue" Arial, "Noto Sans", sans-serif;
-  --background-image-galaxy: url("/Images/BG_galaxy_3.png");
+  --background-image-galaxy: url("/Images/bg_galaxy_web.webp");
   --background-image-galaxy-mobile: url("/Images/BG_galaxy_phone.png");
   --background-image-gold-grad: linear-gradient(
     180deg,

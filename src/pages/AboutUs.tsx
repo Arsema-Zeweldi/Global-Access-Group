@@ -13,9 +13,9 @@ const founders = [
     text: "Results-driven professional with proven strength in sales, lead generation, and client relationship management, consistently turning opportunities into growth.With a background in Marketing Management, I bring a strategic, adaptable approach to execution.",
   },
   {
-    name: "LIYDYA Co-Founder and Head of Talent Strategy",
+    name: "LIDYA Co-Founder and Head of Talent Strategy",
     image: "./Images/founders/lidya.png",
-    text: "Lidya Mitiku Tegegne is one of the Founders of Global Access Group, a global outsourcing firm built to help businesses scale efficiently through high-performing remote talent and streamlined systems. With a background in Economics and over three years of high-volume B2B growth experience, Lidya has driven measurable results — generating consistent pipeline growth, increasing new business by 35%, and closing over $50K in strategic deals.",
+    text: "Lidya Mitiku is a growth-focused recruiter and sales professional known for turning outreach into real opportunities. She specializes in building strong pipelines, connecting top talent, and driving measurable results.",
   },
   {
     name: "PHILI  Co-Founder and Head of Talent Acquisition",

@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="text-white mt-[25vh] lg:mt-[7vh]"
+      className="text-white mt-[20vh] lg:mt-[7vh]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -55,7 +55,7 @@ const Hero = () => {
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="font-light mb-18 lg:mb-25 text-center text-[18px] lg:text-[30px]"
+        className="font-light mb-15 lg:mb-25 text-center text-[18px] lg:text-[30px]"
       >
         OnBoarding New Talents Within Days
       </motion.p>
