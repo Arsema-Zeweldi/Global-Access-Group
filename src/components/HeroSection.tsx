@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="text-white mt-[20vh] lg:mt-[7vh]"
+      className="text-white mt-[20vh] lg:mt-[8vh]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -49,30 +49,27 @@ const Hero = () => {
     >
       <motion.h1
         variants={itemVariants}
-        className="font-bold mb-0 text-[28px] lg:text-[60px] text-center"
+        className="font-bold mb-1 text-[30px] lg:text-[55px] text-center lg:leading-[1.3] leading-normal"
       >
         WHERE CAPABILITY MEETS <br /> CONSISTENCY
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="font-light mb-15 lg:mb-25 text-center text-[18px] lg:text-[30px]"
+        className="font-light mb-4 lg:mb-5 text-center text-[20px] lg:text-[25px]"
       >
         OnBoarding New Talents Within Days
       </motion.p>
-      <motion.div
-        variants={itemVariants}
-        className="flex justify-center gap-4 mt-10"
-      >
+      <motion.div variants={itemVariants} className="flex justify-center gap-4">
         <button
           onClick={onTalent}
-          className="border border-white py-3 px-5 rounded-full lg:rounded-2xl bg-gold-grad font-black hover:bg-gold-grad-hover cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 hover:brightness-110 active:brightness-110 shadow-lg text-[18px] lg:text-2xl"
+          className="border border-white py-2 px-4 rounded-full lg:rounded-2xl bg-gold-grad font-black hover:bg-gold-grad-hover cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 hover:brightness-110 active:brightness-110 shadow-lg text-[16px] lg:text-lg"
         >
           FIND TALENT
         </button>
 
         <button
           onClick={onWork}
-          className="border border-white py-3 px-5 rounded-full lg:rounded-xl cursor-pointer font-black hover:bg-white hover:text-black active:bg-white active:text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[18px] lg:text-2xl"
+          className="border border-white py-2 px-4 rounded-full lg:rounded-2xl cursor-pointer font-black hover:bg-white hover:text-black active:bg-white active:text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[16px] lg:text-lg"
         >
           FIND WORK
         </button>

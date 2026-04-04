@@ -33,9 +33,14 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="bg-galaxy-mobile bg-size-[100%_100%] lg:bg-galaxy bg-bottom bg-no-repeat min-h-screen">
-              <Navbar />
-              <Hero />
+            <div className="relative lg:bg-size[100%_100%] h-screen bg-galaxy-mobile lg:bg-galaxy bg-cover bg-center lg:bg-position-[center_top_40%] lg:bg-fit bg-no-repeat">
+              {/* <div className="absolute inset-0 bg-linear-to-b from-transparent from-70% to-black pointer-events-none"></div> */}
+              <div className="absolute inset-0 bg-linear-to-b  from-[#03142B]/5% from-72% to-[#03142B] pointer-events-none"></div>
+
+              <div className="relative z-10">
+                <Navbar />
+                <Hero />
+              </div>
             </div>
 
             <div id="mission">
